@@ -1,17 +1,19 @@
 <div style="width:100%">
-    <div class="projectHead product">
+    <div class="projectHead product" style="background:#3f91d2;">
         <div class="wrap">
             <div class="text left" ng-controller="timerController">
                 <h1>Tournaments</h1><h2>{{currentdate | date:'fullDate'}}</h2>
                 <p>This semester we will be hosting tournaments every Wednesday at 7:00pm. Sign up will be announced 30 minutes before tournament play begins. Space is limited so get to The Roost early. All participants will be provided with FREE pizza and the winner of the tournament will be honored on our “Hall of Fame”. In addition, each tournament will be accompanied with a different event.</p>
-                <h2>Tournaments for the 2014 Fall semester:</h2>
+                <!--This will display the current semester-->
+                <h2>Tournaments for the {{currentdate | date:'yyyy'}} Spring semester:</h2>
+                <!--End current semester-->
                 <div ng-repeat="game in games">
-                <h2 ng-class="{true: 'donedate', false: 'predate'}[currentdate < game.date]">{{game.date | date:'fullDate'}} : {{game.name}}</h2>
+                <h2 ng-class="{true: 'donedate', false: 'predate'}[currentdate > game.date]">{{game.date | date:'fullDate'}} : {{game.name}}</h2>
                 </div>
             </div>
             <img class="picture right" src="images/bracket.png" />
             <div style="clear:both"></div>
         </div>
     </div>
-    <ng-include src="'pages/footer.html'"></ng-include>
+    <ng-include src="'pages/bottomnav.html'"></ng-include>
 </div>

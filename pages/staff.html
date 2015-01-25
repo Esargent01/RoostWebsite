@@ -3,14 +3,14 @@
         <div class="wrap">
             <div class="head">Staff</div>
             <p> Currently our friendly staff consists of 14 people not 15, because Kennan is gone and someone can't count. We are here to assist you with all of your Roost Game Room needs.  We are always looking to improve, so please provide us with any suggestions you may have. Here’s a look at our new crew.</p>
-        </div>
-    </div>
-
-    <div class="rostergrid" style="background-color:#f5f5f5">
-        <div class="roster" ng-repeat="img in imgs">
-            <div class="rosterimg" style= "background: url({{img.src}}) no-repeat; background-size:cover;">
-                    <div class="rosterwrap">{{img.title}}</div>
+            <div class="rostergrid">
+                <div class="roster" ng-repeat="img in imgs">
+                    <div class="rosterimg" style= "background: url({{img.src}}) no-repeat; background-size:cover;">
+                        <div class="rosterwrap">{{img.title}}</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <ng-include src="'pages/footer.html'"></ng-include>
 </div>

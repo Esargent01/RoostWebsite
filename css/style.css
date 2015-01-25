@@ -94,7 +94,14 @@ input:focus,textarea:focus {
   padding:0 50px;
   position:relative;
   width:100%;
+  -ms-overflow-style: none;
+  overflow: -moz-scrollbars-none;
 }
+
+.wrap::-webkit-scrollbar { 
+  width: 0 !important
+}
+
 .wrap:before {
   content:'';
   display:inline-block;
@@ -216,26 +223,27 @@ ul.times{
 }
 
 .roster{
-  width: 1050px;
-  margin-left: 175px;
+  width: 100%;
+  margin-left: 5%;
   position: relative;
 }
 
 .rostergrid{
   width: 100%;
+  margin-top: 2%;
 }
 
 .rosterimg{
   float:left;
   width: 175px;
-  height:230px;
+  height: 230px;
   background-repeat: no-repeat; 
 }
 
 .rosterwrap{
   opacity:0;
-  width: 175px;
-  height: 230px;
+  width: 100%;
+  height: 100%;
   color: #fff;
   text-align: center;
   webkit-transition: ease-out .3s;

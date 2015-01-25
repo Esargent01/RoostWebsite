@@ -16,16 +16,16 @@
 var app = angular.module('example359', []).
     config(['$routeProvider', function ($routeProvider) {
       $routeProvider.
-        when('/', { templateUrl: 'pages/index.html', activetab: 'projects', controller: HomeCtrl }).
-        when('/project/:projectId', {
+        when('/', { templateUrl: 'pages/index.html', activetab: 'home', controller: HomeCtrl }).
+        when('/:projectId', {
           templateUrl: function (params) { return 'pages/' + params.projectId + '.html'; },
           controller: ProjectCtrl,
           activetab: 'projects'
         }).
-        when('/privacy', {
-          templateUrl: 'pages/privacy.html',
-          controller: PrivacyCtrl,
-          activetab: 'privacy'
+        when('/staff', {
+          templateUrl: 'pages/staff.html',
+          controller: StaffCtrl,
+          activetab: 'staff'
         }).
         otherwise({ redirectTo: '/' });
     }]).run(['$rootScope', '$http', '$browser', '$timeout', "$route", function ($scope, $http, $browser, $timeout, $route) {
@@ -106,12 +106,12 @@ app.controller('rosterController', function($scope){
 app.controller('timerController', function($scope){
   $scope.currentdate = new Date();
   $scope.games = [
-  {name:'TTT2', date:'2014-10-23'},
-  {name:'Project M', date:'2014-10-27'},
-  {name:'Ping Pong', date:'2014-11-02'},
-  {name:'8 Ball', date:'2015-12-09'},
-  {name:'Melee and Project M', date:'2015-12-15'},
-  {name:'9 Ball', date:'2015-12-19'}];
+  {name:'TTT2', date: new Date(2013, 0, 1)},
+  {name:'Project M', date: new Date(2014, 11, 26)},
+  {name:'Ping Pong', date: new Date(2014, 11, 31)},
+  {name:'8 Ball', date: new Date(2015, 0, 8)},
+  {name:'Melee and PM', date: new Date(2015, 0, 16)},
+  {name:'9 Ball', date: new Date(2015, 1, 8)}];
 });
 
 

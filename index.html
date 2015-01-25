@@ -27,8 +27,8 @@
             <!-- navigation menu -->
             <nav>
                 <ul>
-                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'projects'}" >Home</a></li>
-                    <li><a id="privacyBtn" href="#!/privacy" ng-class="{activeSmall:part == 'privacy'}">Staff</a></li>
+                    <li><a id="workBtn" href="#!/" ng-class="{activeSmall:part == 'home'}" >Home</a></li>
+                    <li><a id="staffBtn" href="#!/staff" ng-class="{activeSmall:part == 'staff'}">Staff</a></li>
                     <li style="margin-right:0px"><a id="contactBtn" class="active" href="javascript: void(0)" ng-click="showForm()">Contact Us</a></li>
                 </ul>
             </nav>
@@ -59,6 +59,5 @@
     <div style="position:relative">
         <div style="width:100%" ng-view ng-animate="{enter: 'view-enter', leave: 'view-leave'}"></div>
     </div>
-
 </body>
 </html>
